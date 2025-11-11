@@ -1,6 +1,7 @@
-class NotificationFactory {
-    
-    // Método estático que crea las Notificationes según el tipo
+public class NotificationFactory {
+
+    // Método estático que va clasificar las notificaciones como en el ejemplo de
+    // las pizzas
     public static Notification crearNotificacion(String tipo) {
         switch (tipo.toUpperCase()) {
             case "EMAIL":
@@ -10,7 +11,7 @@ class NotificationFactory {
             case "WHATSAPP":
                 return new NotificationWhatsapp();
             default:
-                System.out.println("Tipo de notificación no válido: " + tipo);
+                System.out.println("Tipo de notificación inválido: " + tipo);
                 return null;
         }
     }
